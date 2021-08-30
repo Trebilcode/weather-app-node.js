@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
         }else if(error) {
             callback(error.info)
         } else {
-            callback(null, `${current.weather_descriptions[0]}. It is currently ${current.temperature} degrees. It feels like ${current.feelslike} degrees out.`)
+            callback(null, `${current.weather_descriptions[0]}. It is currently ${current.temperature} degrees. It feels like ${current.feelslike} degrees out. The observation time was ${current.observation_time}`)
             // callback(null, {
             //     current,
             //     location
